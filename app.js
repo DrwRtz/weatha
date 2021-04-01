@@ -35,12 +35,10 @@ window.addEventListener('load', () => {
 
                     locationTimezone.textContent = data.name + "/" + data.sys.country;
                     // Set Icon
-                    // setIcons(icon, document.querySelector(".icon"));
                     document.querySelector('img').src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
                     // FORMULA FOR CELSIUS
                     let celsius = (temp - 32) * (5 / 9);
                     
-
                     // Change temperature to Celsius/Farenheit
                     degreeSection.addEventListener('click', () => {
                         if (temperatureSpan.textContent === 'F') {
@@ -55,13 +53,7 @@ window.addEventListener('load', () => {
         });
 
     } else {
-        h1.textContent = "hey dis is not working bec of reasons";
+        h1.textContent = "not working";
     }
 
-    // asdasdasd
-   /* function setIcons(icon, iconID) {
-        const skycons = new Skycons({color: "white"});
-        skycons.play();
-        return skycons.set(iconID, Skycons[icon]);
-    }*/
 });
